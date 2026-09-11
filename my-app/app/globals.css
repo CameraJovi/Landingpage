@@ -1,0 +1,58 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+    @apply scroll-smooth scroll-pt-[88px] sm:scroll-pt-[100px];
+  }
+  body {
+    @apply bg-paper font-sans text-foreground antialiased;
+  }
+  ::selection {
+    @apply bg-brand text-ink;
+  }
+  :focus-visible {
+    @apply outline outline-[3px] outline-offset-[5px] outline-focus;
+  }
+  h1,
+  h2 {
+    @apply font-display font-semibold tracking-[-0.025em] text-balance;
+  }
+  h2 {
+    @apply text-[clamp(2.6rem,4.3vw,4rem)] leading-[1.04];
+  }
+  h3,
+  h4 {
+    @apply font-[750];
+  }
+  p {
+    @apply leading-[1.8] text-pretty;
+  }
+  button,
+  summary,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+  button,
+  summary {
+    @apply cursor-pointer;
+  }
+  a,
+  button {
+    @apply touch-manipulation;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

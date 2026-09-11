@@ -1,0 +1,140 @@
+{
+    "schemaVersion":  2,
+    "generatedAt":  "2026-09-11T13:21:40.9828946Z",
+    "title":  "Design System: Deepy · Câmera Jovi",
+    "extensions":  {
+                       "colorMeta":  {
+                                         "brand":  {
+                                                       "role":  "primary",
+                                                       "displayName":  "Amarelo original"
+                                                   },
+                                         "paper":  {
+                                                       "role":  "neutral",
+                                                       "displayName":  "Fundo preto"
+                                                   },
+                                         "surface":  {
+                                                         "role":  "neutral",
+                                                         "displayName":  "Superfície escura"
+                                                     },
+                                         "foreground":  {
+                                                            "role":  "neutral",
+                                                            "displayName":  "Texto principal"
+                                                        },
+                                         "ink":  {
+                                                     "role":  "neutral",
+                                                     "displayName":  "Texto do botão amarelo"
+                                                 },
+                                         "muted":  {
+                                                       "role":  "neutral",
+                                                       "displayName":  "Texto secundário"
+                                                   },
+                                         "line":  {
+                                                      "role":  "neutral",
+                                                      "displayName":  "Divisores"
+                                                  }
+                                     },
+                       "shadows":  [
+                                       {
+                                           "name":  "button-outline",
+                                           "value":  "inset 0 0 0 1px #777",
+                                           "purpose":  "Contorno do botão secundário."
+                                       }
+                                   ],
+                       "motion":  [
+                                      {
+                                          "name":  "product-enter",
+                                          "value":  "translateY(24px) to translateY(0); 900ms cubic-bezier(0.16,1,0.3,1) both",
+                                          "purpose":  "Entrada da composição de três telas do hero."
+                                      },
+                                      {
+                                          "name":  "button",
+                                          "value":  "background-color 160ms, transform 160ms",
+                                          "purpose":  "Hover e pressão dos botões."
+                                      },
+                                      {
+                                          "name":  "contact-chevron",
+                                          "value":  "transform 180ms",
+                                          "purpose":  "Abertura da demonstração de contato."
+                                      },
+                                      {
+                                          "name":  "reduced-motion",
+                                          "value":  "transition: none !important; animation: none !important; scroll-behavior: auto",
+                                          "purpose":  "Preferência de movimento reduzido; rolagem aplicada ao html."
+                                      }
+                                  ],
+                       "breakpoints":  [
+                                           {
+                                               "name":  "sm",
+                                               "value":  "640px"
+                                           },
+                                           {
+                                               "name":  "feature-two-columns",
+                                               "value":  "768px"
+                                           },
+                                           {
+                                               "name":  "desktop-navigation",
+                                               "value":  "1024px"
+                                           }
+                                       ]
+                   },
+    "components":  [
+                       {
+                           "name":  "Botão principal",
+                           "kind":  "button",
+                           "refersTo":  "button-primary",
+                           "description":  "Ação de acesso à câmera.",
+                           "html":  "\u003cbutton class=\"ds-primary\"\u003eExperimentar a câmera\u003c/button\u003e",
+                           "css":  ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:16px 22px;min-height:48px;background:#ffc107;color:#202020;border:0;border-radius:9999px;font:800 14px \u0027Manrope Variable\u0027,sans-serif;transition:background-color 160ms,transform 160ms}.ds-primary:hover{background:#ffd24e}.ds-primary:active{transform:scale(.98)}.ds-primary:focus-visible{outline:3px solid #ffc107;outline-offset:5px}"
+                       },
+                       {
+                           "name":  "Botão de contorno",
+                           "kind":  "button",
+                           "description":  "Acesso ao código sobre fundo preto.",
+                           "html":  "\u003cdiv class=\"ds-dark\"\u003e\u003cbutton class=\"ds-outline\"\u003eVer código\u003c/button\u003e\u003c/div\u003e",
+                           "css":  ".ds-dark{background:#000;padding:20px}.ds-outline{background:transparent;color:#f5f5f7;box-shadow:inset 0 0 0 1px #777;border:0;border-radius:9999px;padding:16px 22px;min-height:48px;font:800 14px \u0027Manrope Variable\u0027,sans-serif;transition:background-color 160ms,transform 160ms}.ds-outline:hover{background:#373737}.ds-outline:active{transform:scale(.98)}.ds-outline:focus-visible{outline:3px solid #ffc107;outline-offset:5px}"
+                       },
+                       {
+                           "name":  "Campo de contato",
+                           "kind":  "input",
+                           "refersTo":  "field",
+                           "description":  "Campo com rótulo visível na demonstração local.",
+                           "html":  "\u003clabel class=\"ds-label\"\u003eNome\u003cinput class=\"ds-input\" name=\"nome\" autocomplete=\"name\" required maxlength=\"100\"\u003e\u003c/label\u003e",
+                           "css":  ".ds-label{display:grid;gap:8px;background:#000;color:#f5f5f7;padding:20px;font:13px \u0027Manrope Variable\u0027,sans-serif}.ds-input{background:#151515;border:1px solid #737373;border-radius:6px;padding:12px;color:white;caret-color:#ffc107;font-family:\u0027Manrope Variable\u0027,sans-serif}.ds-input:focus-visible{outline:3px solid #ffc107;outline-offset:5px}"
+                       },
+                       {
+                           "name":  "Navegação",
+                           "kind":  "nav",
+                           "description":  "Links de âncora do cabeçalho.",
+                           "html":  "\u003cnav class=\"ds-nav\" aria-label=\"Navegação principal\"\u003e\u003ca href=\"#solucao\"\u003eA solução\u003c/a\u003e\u003ca href=\"#galeria\"\u003eNa prática\u003c/a\u003e\u003ca href=\"#equipe\"\u003eEquipe\u003c/a\u003e\u003c/nav\u003e",
+                           "css":  ".ds-nav{display:flex;flex-wrap:wrap;align-items:center;gap:28px;padding:20px;background:#000;font:650 13px \u0027Manrope Variable\u0027,sans-serif}.ds-nav a{color:#f5f5f7;padding-block:15px;text-decoration:none}.ds-nav a:hover{text-decoration:underline;text-underline-offset:6px}.ds-nav a:focus-visible{outline:3px solid #ffc107;outline-offset:5px}"
+                       },
+                       {
+                           "name":  "Âncora de recurso",
+                           "kind":  "chip",
+                           "description":  "Link para uma seção completa de funcionalidade.",
+                           "html":  "\u003cdiv class=\"ds-resource-wrap\"\u003e\u003ca class=\"ds-resource\" href=\"#flashcards\"\u003eFlashcards\u003c/a\u003e\u003c/div\u003e",
+                           "css":  ".ds-resource-wrap{background:#000;padding:20px}.ds-resource{display:inline-flex;align-items:center;min-height:44px;border:1px solid #303030;border-radius:9999px;padding:8px 20px;color:#a1a1a6;text-decoration:none;font:14px \u0027Manrope Variable\u0027,sans-serif;transition:color 150ms,border-color 150ms}.ds-resource:hover{border-color:#ffc107;color:#ffc107}.ds-resource:focus-visible{outline:3px solid #ffc107;outline-offset:5px}"
+                       }
+                   ],
+    "narrative":  {
+                      "overview":  "A landing acadêmica apresenta o produto sobre preto, com títulos amplos, capturas reais e explicações dedicadas a cada recurso. A estrutura inspirada nas apresentações de produto da Apple combina hero centralizado e seções alternadas de texto e imagem. O amarelo original identifica ações e recursos.",
+                      "keyCharacteristics":  [
+                                                 "Fundo preto, superfícies discretas e texto claro.",
+                                                 "Manrope em toda a hierarquia e amplo espaço entre conteúdos.",
+                                                 "Capturas reais acompanhadas de explicações e legendas."
+                                             ],
+                      "rules":  [
+
+                                ],
+                      "dos":  [
+                                  "Do preservar o fundo preto, o amarelo original e a família Manrope.",
+                                  "Do usar capturas, retratos e identidade reais do projeto.",
+                                  "Do explicar cada recurso com conteúdo acessível por rolagem e âncoras.",
+                                  "Do manter componentes `.js` e estilos de layout, estados e responsividade nas classes Tailwind; reservar `globals.css` para a base global e movimento reduzido."
+                              ],
+                      "donts":  [
+                                    "Don\u0027t transformar a demonstração de formulário em promessa de envio.",
+                                    "Don\u0027t acrescentar métricas, preços, depoimentos ou garantias sem fonte no projeto."
+                                ]
+                  }
+}

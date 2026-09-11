@@ -1,0 +1,17 @@
+﻿import { defineConfig } from "@playwright/test";
+
+export default defineConfig({
+  testDir: "./tests",
+  fullyParallel: true,
+  use: {
+    baseURL: "http://localhost:3100",
+    browserName: "chromium",
+    channel: process.env.PLAYWRIGHT_CHANNEL || undefined,
+    headless: true,
+  },
+  webServer: {
+    command: "npm run start -- --port 3100",
+    url: "http://localhost:3100",
+    reuseExistingServer: false,
+  },
+});
