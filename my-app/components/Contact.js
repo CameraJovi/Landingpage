@@ -19,8 +19,7 @@ export default function Contact() {
             pode começar aqui.
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base text-muted">
-            Experimente o switch mode no seu dispositivo ou conheça o código
-            desenvolvido pela equipe Deepy.
+            Experimente o switch mode no seu dispositivo ou conheça o código.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <AppLink />

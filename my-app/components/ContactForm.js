@@ -26,10 +26,6 @@ export default function ContactForm() {
           aria-hidden="true"
         />
       </summary>
-      <p className="pb-[22px] text-sm text-dark-copy" id="form-note">
-        Exercício de validação do projeto acadêmico. Os dados não são enviados
-        nem armazenados.
-      </p>
       <form
         onSubmit={submit}
         aria-describedby="form-note"

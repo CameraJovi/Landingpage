@@ -19,9 +19,7 @@ export default function Footer() {
           />
           <span>Deepy</span>
         </a>
-        <p className="text-[11px]">
-          Câmera Jovi · {new Date().getFullYear()}
-        </p>
+        <p className="text-[11px]">Câmera Jovi · {new Date().getFullYear()}</p>
         <a
           className="inline-flex min-h-11 items-center gap-3 text-xs font-[750] hover:underline underline-offset-[5px]"
           href="#inicio"

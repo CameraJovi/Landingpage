@@ -55,7 +55,9 @@ export default function FeatureSection({ feature, reverse }) {
             className="mx-auto h-auto max-h-[600px] w-auto max-w-full rounded-2xl object-contain"
           />
           <figcaption className="mt-5 text-center text-xs text-muted">
-            <span className="mb-2 block text-sm font-semibold text-brand">{feature.title}</span>
+            <span className="mb-2 block text-sm font-semibold text-brand">
+              {feature.title}
+            </span>
             {feature.caption}
           </figcaption>
         </figure>
