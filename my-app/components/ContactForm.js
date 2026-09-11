@@ -19,7 +19,7 @@ export default function ContactForm() {
   return (
     <details className="mt-[30px] border-b border-dark-line group">
       <summary className="flex list-none items-center justify-between gap-4 py-[22px] text-sm font-[650] [&::-webkit-details-marker]:hidden">
-        Formulário de contato demonstrativo{" "}
+        Formulário de contato{" "}
         <ChevronDown
           className="shrink-0 transition-transform duration-[180ms] group-open:rotate-180"
           size={18}

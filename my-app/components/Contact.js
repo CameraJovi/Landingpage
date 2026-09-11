@@ -19,7 +19,7 @@ export default function Contact() {
             pode começar aqui.
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base text-muted">
-            Experimente a Câmera Jovi no seu dispositivo ou conheça o código
+            Experimente o switch mode no seu dispositivo ou conheça o código
             desenvolvido pela equipe Deepy.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">

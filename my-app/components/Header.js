@@ -42,7 +42,7 @@ export default function Header() {
             alt=""
           />
           <span>
-            deepy<span className="text-focus">.</span>
+            Deepy
           </span>
         </a>
         <button

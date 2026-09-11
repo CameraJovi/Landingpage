@@ -17,10 +17,10 @@ export default function Footer() {
             height={30}
             alt=""
           />
-          <span>deepy.</span>
+          <span>Deepy</span>
         </a>
         <p className="text-[11px]">
-          Câmera Jovi · Projeto acadêmico · {new Date().getFullYear()}
+          Câmera Jovi · {new Date().getFullYear()}
         </p>
         <a
           className="inline-flex min-h-11 items-center gap-3 text-xs font-[750] hover:underline underline-offset-[5px]"

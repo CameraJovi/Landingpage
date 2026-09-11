@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata = {
   title: "Câmera Jovi — Da aula para o seu estudo",
   description:
-    "Da foto da lousa ao material de revisão. Conheça a Câmera Jovi, um projeto da equipe Deepy para o Challenge FIAP.",
+    "Da foto da lousa ao material de revisão. Conheça O Switch mode, um projeto da equipe Deepy",
   icons: { icon: "/assets/logo-deepy.svg" },
 };
 
