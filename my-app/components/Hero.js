@@ -1,4 +1,5 @@
-﻿import Image from "next/image";
+﻿import Reveal from "./Reveal";
+import Image from "next/image";
 import { ArrowDown } from "lucide-react";
 import { asset } from "../lib/content";
 import AppLink from "./AppLink";
@@ -11,19 +12,31 @@ export default function Hero() {
       className="overflow-hidden bg-black pt-16 sm:pt-24"
     >
       <div className="container px-5 text-center sm:px-6 lg:px-12">
-        <h1
+        <Reveal
+          as="h1"
+          animation="hero"
+          repeat
           id="hero-title"
           className="mx-auto max-w-5xl text-[clamp(3rem,7vw,6rem)] leading-[1.04] tracking-[-0.04em]"
         >
           Sua câmera.
           <br />
           Seu próximo jeito de estudar.
-        </h1>
-        <p className="mx-auto mt-6 max-w-xl text-base text-muted sm:text-lg">
+        </Reveal>
+        <Reveal
+          as="p"
+          animation="hero"
+          repeat
+          className="motion-safe:[animation-delay:150ms] mx-auto mt-6 max-w-xl text-base text-muted sm:text-lg"
+        >
           Câmera Jovi. Da imagem da lousa ao resumo, às perguntas e ao próximo
           passo da sua revisão.
-        </p>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-6">
+        </Reveal>
+        <Reveal
+          animation="hero"
+          repeat
+          className="motion-safe:[animation-delay:300ms] mt-8 flex flex-wrap items-center justify-center gap-6"
+        >
           <AppLink />
           <a
             href="#galeria"
@@ -31,8 +44,13 @@ export default function Hero() {
           >
             Explore os recursos <ArrowDown size={17} aria-hidden="true" />
           </a>
-        </div>
-        <figure className="mx-auto mt-14 max-w-4xl motion-safe:animate-product-enter">
+        </Reveal>
+        <Reveal
+          as="figure"
+          animation="product"
+          repeat
+          className="mx-auto mt-14 max-w-4xl"
+        >
           <div className="grid grid-cols-[1fr_1.15fr_1fr] items-end gap-2 sm:gap-7">
             <Image
               unoptimized
@@ -63,7 +81,7 @@ export default function Hero() {
           <figcaption className="mt-8 pb-12 text-xs text-muted">
             Telas reais da Câmera Jovi. Disponível no navegador.
           </figcaption>
-        </figure>
+        </Reveal>
       </div>
     </section>
   );

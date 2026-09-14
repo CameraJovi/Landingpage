@@ -1,4 +1,4 @@
-# Câmera Jovi — Deepy
+﻿# Câmera Jovi — Deepy
 
 Landing page acadêmica em Next.js App Router, React e Tailwind CSS 3. Apresenta a proposta, seis recursos com telas reais, público, integrantes e links do projeto. O visual usa fundo preto, Manrope e amarelo, com hero de três capturas e seções amplas de texto e imagem.
 
@@ -44,3 +44,14 @@ As imagens são capturas e retratos fornecidos. O menu móvel fecha com Escape. 
 Altere textos e integrantes em `lib/content.js`; preserve nomes e RMs conforme `../INTEGRANTES.TXT`. Mantenha componentes em `.js` e use classes Tailwind para layout, espaçamento, estados e responsividade. `Button.js` compartilha variantes de botões e links; `AppLink.js` especializa o acesso à Jovi. `globals.css` permanece restrito à base global.
 
 O projeto usa Webpack e Tailwind 3 para compatibilidade com ambientes Windows que bloqueiam módulos nativos. O Next.js pode usar seu compilador WebAssembly automaticamente.
+
+### Animação da abertura e estrutura do botão
+
+Na primeira seção, título, descrição e ações usam `animate-hero-enter`. O Tailwind anima transparência e deslocamento de 32 pixels por 1100 ms, com pequenos atrasos de 150 e 300 ms. A abertura espera fontes e imagens, executa ao entrar na tela e repete ao retornar. Respeita `prefers-reduced-motion`.
+
+`Button.js` usa uma função com um `if`: quando recebe `href`, renderiza `<a>`; caso contrário, renderiza `<button>`. A constante `buttonClasses` reúne os estilos compartilhados. `const` é apenas uma declaração JavaScript; a semântica vem das tags HTML. Sem `type` informado, o botão usa `type="button"` para não enviar um formulário por acidente.
+
+
+### Repetição durante a rolagem
+
+`Reveal` usa `repeat = true` por padrão. Quando o elemento sai da janela, o observador remove a classe de animação. Quando ele volta a aparecer, adiciona a classe novamente. Assim, o efeito funciona ao descer e ao subir, tanto na abertura quanto nas telas das funcionalidades. Para animar um elemento apenas uma vez, use `repeat={false}`.

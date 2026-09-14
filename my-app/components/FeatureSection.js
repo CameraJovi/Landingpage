@@ -1,4 +1,5 @@
-﻿import Image from "next/image";
+﻿import Reveal from "./Reveal";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { asset, appUrl } from "../lib/content";
 
@@ -44,7 +45,10 @@ export default function FeatureSection({ feature, reverse }) {
             <span className="sr-only"> (abre em nova aba)</span>
           </a>
         </div>
-        <figure className={`min-w-0 ${reverse ? "md:order-1" : ""}`}>
+        <Reveal
+          as="figure"
+          className={`min-w-0 ${reverse ? "md:order-1" : ""}`}
+        >
           <Image
             unoptimized
             src={asset(feature.image)}
@@ -52,7 +56,7 @@ export default function FeatureSection({ feature, reverse }) {
             width={556}
             height={929}
             loading="lazy"
-            className="mx-auto h-auto max-h-[600px] w-auto max-w-full rounded-2xl object-contain"
+            className="mx-auto h-auto max-h-[600px] w-auto max-w-full rounded-2xl object-contain transition-transform duration-300 motion-safe:hover:scale-[1.02]"
           />
           <figcaption className="mt-5 text-center text-xs text-muted">
             <span className="mb-2 block text-sm font-semibold text-brand">
@@ -60,7 +64,7 @@ export default function FeatureSection({ feature, reverse }) {
             </span>
             {feature.caption}
           </figcaption>
-        </figure>
+        </Reveal>
       </div>
     </article>
   );
