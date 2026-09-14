@@ -55,3 +55,7 @@ Na primeira seção, título, descrição e ações usam `animate-hero-enter`. O
 ### Repetição durante a rolagem
 
 `Reveal` usa `repeat = true` por padrão. Quando o elemento sai da janela, o observador remove a classe de animação. Quando ele volta a aparecer, adiciona a classe novamente. Assim, o efeito funciona ao descer e ao subir, tanto na abertura quanto nas telas das funcionalidades. Para animar um elemento apenas uma vez, use `repeat={false}`.
+
+### Apresentação das etapas
+
+`StudyJourney.js` substitui as três colunas por um painel interativo com as etapas Capturar, Preparar e Revisar. Cada opção mostra uma explicação e uma tela real da aplicação. Usa apenas `useState`, `useRef` e Tailwind; as setas do teclado, Home e End também alternam as etapas. A troca tem uma transição curta e respeita movimento reduzido.
