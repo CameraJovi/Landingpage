@@ -1,5 +1,4 @@
 ﻿import Reveal from "./Reveal";
-import Image from "next/image";
 import { ArrowDown } from "lucide-react";
 import { asset } from "../lib/content";
 import AppLink from "./AppLink";
@@ -9,9 +8,26 @@ export default function Hero() {
     <section
       id="inicio"
       aria-labelledby="hero-title"
-      className="overflow-hidden bg-black pt-16 sm:pt-24"
+      className="relative isolate min-h-[100svh] overflow-hidden bg-black pt-16 pb-20 sm:pt-24 sm:pb-28"
     >
-      <div className="container px-5 text-center sm:px-6 lg:px-12">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+      >
+        <source
+          src={asset("WhatsApp Video 2026-09-14 at 13.29.04.mp4")}
+          type="video/mp4"
+        />
+      </video>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/60 via-black/65 to-black/90"
+      />
+      <div className="container relative z-10 px-5 text-center sm:px-6 lg:px-12">
         <Reveal
           as="h1"
           animation="hero"
@@ -51,33 +67,7 @@ export default function Hero() {
           repeat
           className="mx-auto mt-14 max-w-4xl"
         >
-          <div className="grid grid-cols-[1fr_1.15fr_1fr] items-end gap-2 sm:gap-7">
-            <Image
-              unoptimized
-              src={asset("imagem_3.png")}
-              alt="Flashcards gerados na Jovi"
-              width={446}
-              height={897}
-              className="w-full -rotate-6 rounded-2xl object-contain opacity-80"
-            />
-            <Image
-              unoptimized
-              src={asset("imagem_1.png")}
-              alt="Câmera Jovi no modo Estudante"
-              width={556}
-              height={921}
-              fetchPriority="high"
-              className="z-10 w-full rounded-2xl object-contain"
-            />
-            <Image
-              unoptimized
-              src={asset("imagem_2.png")}
-              alt="Resumo inteligente de matemática na Jovi"
-              width={526}
-              height={929}
-              className="w-full rotate-6 rounded-2xl object-contain opacity-80"
-            />
-          </div>
+         
           <figcaption className="mt-8 pb-12 text-xs text-muted">
             Telas reais da Câmera Jovi. Disponível no navegador.
           </figcaption>
