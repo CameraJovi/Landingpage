@@ -1,5 +1,5 @@
-﻿export const appUrl = "https://camerajovi-kappa.vercel.app";
-export const repoUrl = "https://github.com/CameraJovi/studentmodeapi";
+﻿export const appUrl = "https://front-camera-jovi.vercel.app/";
+export const repoUrl = "https://github.com/CameraJovi/FrontCameraJovi";
 export const asset = (name) => `/assets/${name}`;
 
 export const features = [
