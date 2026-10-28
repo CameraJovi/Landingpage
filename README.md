@@ -8,17 +8,6 @@ Este repositório reúne o site de apresentação do produto, desenvolvido pela 
 
 [Conhecer o site](https://landingpage-iota-indol.vercel.app/) · [Abrir a Jovi](https://front-camera-jovi.vercel.app/) · [Repositório da aplicação](https://github.com/CameraJovi/FrontCameraJovi)
 
-## Do registro à revisão
-
-- **Captura de conteúdo:** registre a lousa, o caderno ou um exercício no modo Estudante.
-- **Resumo inteligente:** retome as ideias centrais do conteúdo capturado.
-- **Flashcards:** transforme o material em perguntas e respostas para exercitar a memória.
-- **Resolução matemática:** acompanhe as etapas de uma resolução e confira o raciocínio com seu material de estudo.
-- **Caderno inteligente:** organize imagens e análises por matéria para consultar depois.
-- **SmartPix:** explore a demonstração de reconhecimento de possíveis e-mails e telefones pela câmera.
-
-Os recursos são apresentados no site e acessados pela aplicação Jovi. Conteúdos gerados automaticamente devem ser conferidos com o material de referência. As ações do SmartPix são demonstrativas.
-
 ## O site
 
 Uma experiência responsiva para celular, tablet e desktop, com navegação por seções, telas dos recursos e apresentação da equipe. O menu móvel e as etapas interativas também podem ser usados pelo teclado, e as animações respeitam a preferência por movimento reduzido.
